@@ -5,4 +5,8 @@ describe BankAccount do
     expect(subject.balance).to eq 0
   end
 
+  it 'shows a deposit can be received' do
+    subject.deposit(10)
+    expect(subject.balance).to eq 10
+  end
 end
