@@ -1,6 +1,6 @@
 # Bank tech test
 
-This test was given on week 10 of Makers.
+This test was given on week 10 of Makers. Essentially, it's a command-line app that enables a user to deposit and withdraw money from a bank account as well as being able to print a bank statement.
 
 ## Specification
 
@@ -30,3 +30,41 @@ date || credit || debit || balance
 
 - I decided to write my solution in Ruby and test in RSpec.
 - I used Rubocop for my linter and SimpleCov to ensure good test coverage.
+
+## To run program
+
+First clone the repo onto your local machine:
+
+```
+git clone https://github.com/pav0107/bank-tech-test.git
+```
+
+Next, open the command line and create a bank account:
+
+```
+my_account = BankAccount.new
+```
+
+You can then use the following commands to deposit, withdraw or print a bank statement:
+
+```
+my_account.credit(10)
+my_account.withdraw(10)
+my_account.statement()
+```
+
+## To run tests
+
+To run tests, the linter or look at test coverage, please use the respective commands in the command line.
+
+```
+rspec
+```
+
+```
+open coverage/index.html
+```
+
+```
+rubocop
+```

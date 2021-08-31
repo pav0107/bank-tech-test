@@ -1,0 +1,23 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Pav/Desktop/Makers/Week 10/bank-tech-test/spec/bank_account_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/Pav/Desktop/Makers/Week 10/bank-tech-test/lib/bank_account.rb": {
+        "lines": [
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1630406698
+  }
+}
