@@ -1,3 +1,5 @@
+require 'date'
+
 def to_2_decimal_places(number)
   '%.2f' % number
 end

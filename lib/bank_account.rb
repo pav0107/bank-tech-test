@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'date'
 require_relative '../helper_functions.rb'
 
 class BankAccount

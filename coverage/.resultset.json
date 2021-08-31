@@ -33,7 +33,6 @@
           null,
           null,
           1,
-          1,
           null,
           1,
           1,
@@ -74,6 +73,8 @@
       "/Users/Pav/Desktop/Makers/Week 10/bank-tech-test/helper_functions.rb": {
         "lines": [
           1,
+          null,
+          1,
           6,
           null,
           null,
@@ -86,6 +87,6 @@
         ]
       }
     },
-    "timestamp": 1630422577
+    "timestamp": 1630422950
   }
 }
