@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'date'
+require_relative '../helper_functions.rb'
 
 class BankAccount
   attr_reader :statement
@@ -34,16 +35,5 @@ class BankAccount
     @transactions = "#{current_date} || || #{decimal_amount} || #{decimal_balance}\n" + @transactions
 
     @statement = @statement_header + @transactions
-  end
-
-  def current_date
-    date_day = "0#{Date.today.day}"[-2, 2]
-    date_month = "0#{Date.today.month}"[-2, 2]
-    date_year = Date.today.year
-    "#{date_day}/#{date_month}/#{date_year}"
-  end
-
-  def to_2_decimal_places(number)
-    '%.2f' % number
   end
 end
