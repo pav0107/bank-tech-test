@@ -75,16 +75,23 @@ git clone https://github.com/pav0107/bank-tech-test.git
 Next, open the command line and run the following:
 
 ```
-ruby lib/bank_account.rb
+ruby bank_program.rb
 ```
 
-You can then use the following commands to deposit, withdraw or print a bank statement:
+You'll then be asked the following:
 
 ```
-my_account.credit(10)
-my_account.withdraw(10)
-my_account.statement()
+Please select from the following:
+Deposit
+Withdraw
+Print Statement
 ```
+
+- The three options can be written in any combination of upper and lowercase, but misspellings or other words will bring up the options again.
+
+- If depositing or withdrawing, you'll be asked how much and then receiving a thank you and confirmation, followed by the three initial options. If zero or any non-integer is entered an error message will appear.
+
+- If printing a statement, the statement will appear, followed by the initial three options.
 
 ## Running tests
 
