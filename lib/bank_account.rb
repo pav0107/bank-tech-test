@@ -10,7 +10,7 @@ class BankAccount
   def initialize(balance = INITIAL_BALANCE)
     @balance = balance
     @statement_header = "date || credit || debit || balance\n"
-    @transactions = ""
+    @transactions = ''
     @statement = @statement_header + @transactions
   end
 
@@ -46,5 +46,4 @@ class BankAccount
   def to_2_decimal_places(number)
     '%.2f' % number
   end
-
 end

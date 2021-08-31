@@ -101,6 +101,8 @@ rspec
 
 ### Checking test coverage
 
+There is 100% test coverage:
+
 ```
 open coverage/index.html
 ```
