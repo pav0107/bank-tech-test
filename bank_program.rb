@@ -16,7 +16,7 @@ loop do
       puts 'Error: not a valid amount'
     else
       account.deposit(amount)
-      puts "Thank you for depositing #{amount}"
+      puts "You have deposited £#{amount}"
     end
   when 'withdraw'
     puts 'How much would you like to withdraw?'
@@ -25,7 +25,7 @@ loop do
       puts 'Error: not a valid amount'
     else
       account.withdraw(amount)
-      puts "Thank you for withdrawing #{amount}"
+      puts "You have withdrawn £#{amount}"
     end
   when 'print statement'
     puts account.statement
