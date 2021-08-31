@@ -2,23 +2,19 @@ require 'bank_account'
 
 describe BankAccount do
   context 'when a new account is opened' do
-    it 'shows a balance of 0' do
-      expect(subject.balance).to eq 0
-    end
-
     it 'prints a statement that is blank apart from headings' do
-      expect(subject.statement).to eq("date || credit || debit || balance")
+      expect(subject.statement).to eq("date || credit || debit || balance\n")
     end
   end
 
   it 'shows a deposit can be received' do
     subject.deposit(10)
-    expect(subject.balance).to eq 10
+    expect(subject.statement).to eq("date || credit || debit || balance\n31/08/2021 || 10.00 || || 10.00\n")
   end
 
   it 'shows a withdrawl can be made' do
     subject.deposit(10)
     subject.withdraw(4)
-    expect(subject.balance).to eq 6
+    expect(subject.statement).to eq("date || credit || debit || balance\n31/08/2021 || 10.00 || || 10.00\n31/08/2021 || || 4.00 || 6.00\n")
   end
 end

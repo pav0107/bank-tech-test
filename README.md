@@ -72,10 +72,10 @@ First clone the repo onto your local machine:
 git clone https://github.com/pav0107/bank-tech-test.git
 ```
 
-Next, open the command line and create a bank account:
+Next, open the command line and run the following:
 
 ```
-my_account = BankAccount.new
+ruby lib/bank_account.rb
 ```
 
 You can then use the following commands to deposit, withdraw or print a bank statement:
