@@ -9,7 +9,9 @@ class BankAccount
 
   def initialize(balance = INITIAL_BALANCE)
     @balance = balance
-    @statement = "date || credit || debit || balance\n"
+    @statement_header = "date || credit || debit || balance\n"
+    @transactions = ""
+    @statement = @statement_header + @transactions
   end
 
   def deposit(amount)
@@ -18,7 +20,9 @@ class BankAccount
     decimal_amount = to_2_decimal_places(amount)
     decimal_balance = to_2_decimal_places(@balance)
 
-    @statement += "#{current_date} || #{decimal_amount} || || #{decimal_balance}\n"
+    @transactions = "#{current_date} || #{decimal_amount} || || #{decimal_balance}\n" + @transactions
+
+    @statement = @statement_header + @transactions
   end
 
   def withdraw(amount)
@@ -27,7 +31,9 @@ class BankAccount
     decimal_amount = to_2_decimal_places(amount)
     decimal_balance = to_2_decimal_places(@balance)
 
-    @statement += "#{current_date} || || #{decimal_amount} || #{decimal_balance}\n"
+    @transactions = "#{current_date} || || #{decimal_amount} || #{decimal_balance}\n" + @transactions
+
+    @statement = @statement_header + @transactions
   end
 
   def current_date
@@ -41,7 +47,4 @@ class BankAccount
     '%.2f' % number
   end
 
-  private
-
-  attr_reader :balance
 end
