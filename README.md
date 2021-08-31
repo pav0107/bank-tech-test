@@ -31,7 +31,40 @@ date || credit || debit || balance
 - I decided to write my solution in Ruby and test in RSpec.
 - I used Rubocop for my linter and SimpleCov to ensure good test coverage.
 
-## To run program
+## User stories
+
+```
+As a customer
+so that I can store money at the bank
+I'd like to deposit money and see my balance increase by that amount.
+```
+
+```
+As a customer
+so that I can take money out of the bank
+I'd like to withdraw money and see my balance decrease by that amount.
+```
+
+```
+As a customer
+so that I can know what money has being going into and out from my account
+I'd like to be able to print a bank statement that shows the date and amount each time I deposit or withdraw money, as well as the balance.
+```
+
+## Domain model
+
+|   BankAccount    |
+| :--------------: |
+|       date       |
+|      credit      |
+|      debit       |
+|     balance      |
+| ---------------- |
+|     credit()     |
+|     debit()      |
+|   statement()    |
+
+## Running the program
 
 First clone the repo onto your local machine:
 
@@ -53,17 +86,19 @@ my_account.withdraw(10)
 my_account.statement()
 ```
 
-## To run tests
-
-To run tests, the linter or look at test coverage, please use the respective commands in the command line.
+## Running tests
 
 ```
 rspec
 ```
 
+### Checking test coverage
+
 ```
 open coverage/index.html
 ```
+
+### Running the linter
 
 ```
 rubocop
