@@ -30,6 +30,8 @@ date || credit || debit || balance
 
 - I decided to write my solution in Ruby and test in RSpec.
 - I used Rubocop for my linter and SimpleCov to ensure good test coverage.
+- I started with a BankAccount class, getting deposit and withdraw functionality working. I then moved on to the statement, getting the most current one at the top.
+- I then moved on to the user interaction via the command line.
 
 ## User stories
 
@@ -89,7 +91,7 @@ Print Statement
 
 - The three options can be written in any combination of upper and lowercase, but misspellings or other words will bring up the options again.
 
-- If depositing or withdrawing, you'll be asked how much and then receiving a thank you and confirmation, followed by the three initial options. If zero or any non-integer is entered an error message will appear.
+- If depositing or withdrawing, you'll be asked how much and then receive a confirmation, followed by the three initial options. If zero or any non-integer is entered an error message will appear.
 
 - If printing a statement, the statement will appear, followed by the initial three options.
 
