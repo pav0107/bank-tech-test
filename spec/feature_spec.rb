@@ -12,6 +12,11 @@ describe BankAccount do
     expect(subject.print_statement).to eq("date || credit || debit || balance\n#{subject.current_date} || 10.00 || || 10.00")
   end
 
+  it 'shows a deposit of non-whole pounds can be received' do
+    subject.deposit(1.32)
+    expect(subject.print_statement).to eq("date || credit || debit || balance\n#{subject.current_date} || 1.32 || || 1.32")
+  end
+
   it 'shows a withdrawl can be made' do
     subject.deposit(10)
     subject.withdraw(4)

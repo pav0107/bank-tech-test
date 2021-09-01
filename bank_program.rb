@@ -11,7 +11,7 @@ loop do
   case selection
   when 'deposit'
     puts 'How much would you like to deposit?'
-    amount = gets.chomp.to_i
+    amount = gets.chomp.to_f
     if amount.zero?
       puts 'Error: not a valid amount'
     else
@@ -20,7 +20,7 @@ loop do
     end
   when 'withdraw'
     puts 'How much would you like to withdraw?'
-    amount = gets.chomp.to_i
+    amount = gets.chomp.to_f
     if amount.zero?
       puts 'Error: not a valid amount'
     else
