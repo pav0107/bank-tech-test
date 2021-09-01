@@ -6,17 +6,19 @@ require_relative './statement'
 
 class Transaction
   def initialize(date, credit = 0, debit = 0, balance = 0)
-    @date = date
-    @credit = credit
-    @debit = debit
-    @balance = balance
+    @info = {
+      date: date,
+      credit: credit,
+      debit: debit,
+      balance: balance
+    }
   end
 
   def format_for_print
-    decimal_credit = @credit != 0 ? " #{'%.2f' % @credit} " : ' '
-    decimal_debit = @debit != 0 ? " #{'%.2f' % @debit} " : ' '
-    decimal_balance = '%.2f' % @balance
+    decimal_credit = @info[:credit] != 0 ? " #{'%.2f' % @info[:credit]} " : ' '
+    decimal_debit = @info[:debit] != 0 ? " #{'%.2f' % @info[:debit]} " : ' '
+    decimal_balance = '%.2f' % @info[:balance]
 
-    "#{@date} ||#{decimal_credit}||#{decimal_debit}|| #{decimal_balance}"
+    "#{@info[:date]} ||#{decimal_credit}||#{decimal_debit}|| #{decimal_balance}"
   end
 end
