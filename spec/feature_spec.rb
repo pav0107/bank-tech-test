@@ -9,20 +9,13 @@ describe BankAccount do
 
   it 'shows a deposit can be received' do
     subject.deposit(10)
-    expect(subject.print_statement).to eq("date || credit || debit || balance\n#{current_date} || 10.00 || || 10.00")
+    expect(subject.print_statement).to eq("date || credit || debit || balance\n#{subject.current_date} || 10.00 || || 10.00")
   end
 
   it 'shows a withdrawl can be made' do
     subject.deposit(10)
     subject.withdraw(4)
-    new_statement = "date || credit || debit || balance\n#{current_date} || || 4.00 || 6.00\n#{current_date} || 10.00 || || 10.00"
+    new_statement = "date || credit || debit || balance\n#{subject.current_date} || || 4.00 || 6.00\n#{subject.current_date} || 10.00 || || 10.00"
     expect(subject.print_statement).to eq(new_statement)
   end
-end
-
-def current_date
-  date_day = "0#{Date.today.day}"[-2, 2]
-  date_month = "0#{Date.today.month}"[-2, 2]
-  date_year = Date.today.year
-  "#{date_day}/#{date_month}/#{date_year}"
 end
