@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'bank_account'
-require_relative '../helper_functions'
 
 describe BankAccount do
   it 'prints a statement that is blank apart from headings when a new account is opened' do
@@ -19,4 +18,11 @@ describe BankAccount do
     new_statement = "date || credit || debit || balance\n#{current_date} || || 4.00 || 6.00\n#{current_date} || 10.00 || || 10.00"
     expect(subject.print_statement).to eq(new_statement)
   end
+end
+
+def current_date
+  date_day = "0#{Date.today.day}"[-2, 2]
+  date_month = "0#{Date.today.month}"[-2, 2]
+  date_year = Date.today.year
+  "#{date_day}/#{date_month}/#{date_year}"
 end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../helper_functions'
+# require_relative '../helper_functions'
 require_relative './bank_account'
 require_relative './statement'
 
@@ -13,11 +13,11 @@ class Transaction
   end
 
   def details
-    decimal_credit = @credit != 0 ? " #{to_2_decimal_places(@credit)} " : ' '
+    decimal_credit = @credit != 0 ? " #{'%.2f' % @credit} " : ' '
 
-    decimal_debit = @debit != 0 ? " #{to_2_decimal_places(@debit)} " : ' '
+    decimal_debit = @debit != 0 ? " #{'%.2f' % @debit} " : ' '
 
-    decimal_balance = to_2_decimal_places(@balance)
+    decimal_balance = '%.2f' % @balance
 
     "#{@date} ||#{decimal_credit}||#{decimal_debit}|| #{decimal_balance}"
   end
