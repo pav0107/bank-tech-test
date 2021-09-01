@@ -1,4 +1,7 @@
 require_relative '../helper_functions.rb'
+require_relative './bank_account.rb'
+require_relative './statement.rb'
+
 
 class Transaction
   def initialize(date, credit = 0, debit = 0, balance = 0)
@@ -9,7 +12,7 @@ class Transaction
   end
 
   def details
-    @balance = @balance + @credit - @debit
+    # @balance = @balance + @credit - @debit
 
     @credit != 0 ? decimal_credit = to_2_decimal_places(@credit) : decimal_credit = ""
 
@@ -17,6 +20,6 @@ class Transaction
 
     decimal_balance = to_2_decimal_places(@balance)
 
-    transaction_details = "#{@date} || #{decimal_credit} || #{decimal_debit} || #{decimal_balance}\n"
+    "#{@date} || #{decimal_credit} || #{decimal_debit} || #{decimal_balance}\n"
   end
 end
