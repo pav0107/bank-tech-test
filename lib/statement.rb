@@ -2,11 +2,8 @@
 require_relative './bank_account'
 
 class Statement
-  attr_accessor :history
-
   def initialize
     @row_title = "date || credit || debit || balance"
-    @history = []
   end
 
   def print(transaction_history)
