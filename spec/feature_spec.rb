@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 require 'bank_account'
-require_relative '../helper_functions.rb'
+require_relative '../helper_functions'
 
 describe BankAccount do
-  context 'when a new account is opened' do
-    it 'prints a statement that is blank apart from headings' do
-      expect(subject.print_statement).to eq("date || credit || debit || balance\n")
-    end
+  it 'prints a statement that is blank apart from headings when a new account is opened' do
+    expect(subject.print_statement).to eq("date || credit || debit || balance\n")
   end
 
   it 'shows a deposit can be received' do

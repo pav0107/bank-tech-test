@@ -3,11 +3,10 @@
 require 'bank_account'
 
 describe BankAccount do
-  # context 'when a new account is opened' do
-  #   it 'prints a statement that is blank apart from headings' do
+  #   it 'prints a statement that is blank apart from headings when a new account is opened' do
   #     expect(subject.statement).to eq("date || credit || debit || balance\n")
   #   end
-  # end
+
 
   # it 'shows a deposit can be received' do
   #   subject.deposit(10)
