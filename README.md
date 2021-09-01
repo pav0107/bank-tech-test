@@ -102,6 +102,10 @@ Print Statement
 
 - If printing a statement, the statement will appear, followed by the initial three options.
 
+## Example of the program
+
+![example](./irb.png)
+
 ## Running tests
 
 ```

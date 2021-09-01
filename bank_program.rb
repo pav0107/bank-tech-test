@@ -28,6 +28,6 @@ loop do
       puts "You have withdrawn £#{amount}"
     end
   when 'print statement'
-    puts account.statement
+    puts account.print_statement
   end
 end
