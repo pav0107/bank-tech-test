@@ -8,27 +8,28 @@ require 'date'
 class BankAccount
   INITIAL_BALANCE = 0
 
-  attr_reader :statement
+  attr_reader :statement, :transaction_history
 
   def initialize(balance = INITIAL_BALANCE, statement = Statement.new)
     @balance = balance
     @statement = statement
+    @transaction_history = []
   end
 
   def deposit(amount)
     @balance += amount
     transaction = Transaction.new(current_date, amount, 0, @balance)
-    @statement.history = @statement.history.unshift(transaction.details)
+    @transaction_history.unshift(transaction.format_for_print)
   end
 
   def withdraw(amount)
     @balance -= amount
     transaction = Transaction.new(current_date, 0, amount, @balance)
-    @statement.history = @statement.history.unshift(transaction.details)
+    @transaction_history.unshift(transaction.format_for_print)
   end
 
   def print_statement
-    @statement.print
+    @statement.print(@transaction_history)
   end
 
   def current_date

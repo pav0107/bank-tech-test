@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require_relative './bank_account'
 
 class Statement
   attr_accessor :history
@@ -8,11 +9,11 @@ class Statement
     @history = []
   end
 
-  def print
-    if @history.length == 0
+  def print(transaction_history)
+    if transaction_history.length == 0
       @row_title
     else
-      @row_title + "\n" + @history.join("\n")
+      @row_title + "\n" + transaction_history.join("\n")
     end
   end
 end
