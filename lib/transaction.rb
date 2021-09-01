@@ -15,8 +15,8 @@ class Transaction
   end
 
   def format_for_print
-    decimal_credit = @info[:credit] != 0 ? " #{'%.2f' % @info[:credit]} " : ' '
-    decimal_debit = @info[:debit] != 0 ? " #{'%.2f' % @info[:debit]} " : ' '
+    decimal_credit = @info[:credit] != 0 ? " #{'%.2f' % @info[:credit]} " : " "
+    decimal_debit = @info[:debit] != 0 ? " #{'%.2f' % @info[:debit]} " : " "
     decimal_balance = '%.2f' % @info[:balance]
 
     "#{@info[:date]} ||#{decimal_credit}||#{decimal_debit}|| #{decimal_balance}"
