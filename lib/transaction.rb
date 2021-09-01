@@ -19,6 +19,6 @@ class Transaction
 
     decimal_balance = to_2_decimal_places(@balance)
 
-    "#{@date} || #{decimal_credit} || #{decimal_debit} || #{decimal_balance}\n"
+    "#{@date} || #{decimal_credit} || #{decimal_debit} || #{decimal_balance}"
   end
 end

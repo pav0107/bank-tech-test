@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-09-01T11:20:36+01:00">2021-09-01T11:20:36+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-09-01T11:29:37+01:00">2021-09-01T11:29:37+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>75</b> relevant lines,
-    <span class="green"><b>75</b> lines covered</span> and
+    <b>77</b> relevant lines,
+    <span class="green"><b>77</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -95,11 +95,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#bdc896b770ec36fe6483322889d96d82187b0b0e" class="src_link" title="lib/statement.rb">lib/statement.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">7</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.29</td>
+            <td class="cell--number">2.22</td>
             
           </tr>
         
@@ -757,8 +757,8 @@
     
 
     <div class="t-line-summary">
-      <b>7</b> relevant lines.
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>9</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -842,7 +842,7 @@
 
             
 
-            <code class="ruby">    @row_title = &quot;date || credit || debit || balance\n&quot;</code>
+            <code class="ruby">    @row_title = &quot;date || credit || debit || balance&quot;</code>
           </li>
         </div>
       
@@ -897,12 +897,56 @@
 
             
 
-            <code class="ruby">    @row_title + @history.join(&quot;&quot;)</code>
+            <code class="ruby">    if @history.length == 0</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="covered" data-hits="2" data-linenumber="13">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      @row_title</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">    else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="15">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      @row_title + &quot;\n&quot; + @history.join(&quot;\n&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -913,7 +957,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -1192,7 +1236,7 @@
 
             
 
-            <code class="ruby">    &quot;#{@date} || #{decimal_credit} || #{decimal_debit} || #{decimal_balance}\n&quot;</code>
+            <code class="ruby">    &quot;#{@date} || #{decimal_credit} || #{decimal_debit} || #{decimal_balance}&quot;</code>
           </li>
         </div>
       
@@ -1441,7 +1485,7 @@
 
             
 
-            <code class="ruby">    expect(subject.print_statement).to eq(&quot;date || credit || debit || balance\n&quot;)</code>
+            <code class="ruby">    expect(subject.print_statement).to eq(&quot;date || credit || debit || balance&quot;)</code>
           </li>
         </div>
       
@@ -1496,7 +1540,7 @@
 
             
 
-            <code class="ruby">    expect(subject.print_statement).to eq(&quot;date || credit || debit || balance\n#{current_date} || 10.00 ||  || 10.00\n&quot;)</code>
+            <code class="ruby">    expect(subject.print_statement).to eq(&quot;date || credit || debit || balance\n#{current_date} || 10.00 ||  || 10.00&quot;)</code>
           </li>
         </div>
       
@@ -1562,7 +1606,7 @@
 
             
 
-            <code class="ruby">    new_statement = &quot;date || credit || debit || balance\n#{current_date} ||  || 4.00 || 6.00\n#{current_date} || 10.00 ||  || 10.00\n&quot;</code>
+            <code class="ruby">    new_statement = &quot;date || credit || debit || balance\n#{current_date} ||  || 4.00 || 6.00\n#{current_date} || 10.00 ||  || 10.00&quot;</code>
           </li>
         </div>
       
@@ -1703,7 +1747,7 @@
 
             
 
-            <code class="ruby">    expect(subject.print).to eq(&quot;date || credit || debit || balance\n&quot;)</code>
+            <code class="ruby">    expect(subject.print).to eq(&quot;date || credit || debit || balance&quot;)</code>
           </li>
         </div>
       
@@ -1877,7 +1921,7 @@
 
             
 
-            <code class="ruby">    expect(transaction1.details).to eq(&quot;31/08/2021 || 10.00 ||  || 10.00\n&quot;)</code>
+            <code class="ruby">    expect(transaction1.details).to eq(&quot;31/08/2021 || 10.00 ||  || 10.00&quot;)</code>
           </li>
         </div>
       
@@ -1932,7 +1976,7 @@
 
             
 
-            <code class="ruby">    expect(transaction2.details).to eq(&quot;01/09/2021 ||  || 10.00 || -10.00\n&quot;)</code>
+            <code class="ruby">    expect(transaction2.details).to eq(&quot;01/09/2021 ||  || 10.00 || -10.00&quot;)</code>
           </li>
         </div>
       
