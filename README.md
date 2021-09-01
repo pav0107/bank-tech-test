@@ -33,6 +33,7 @@ date || credit || debit || balance
 - I started with a BankAccount class, getting deposit and withdraw functionality working. I then moved on to the statement, getting the most current one at the top.
 - I then moved on to the user interaction via the command line.
 - I initially just used one class, which is on the main branch, but later used multiple classes, which is on the 'splitting_classes' branch.
+- I also, initially, had the statement history as a string, but changed to an array. This will make it easier to extend functionality to include selected specific transactions.
 
 ## User stories
 
