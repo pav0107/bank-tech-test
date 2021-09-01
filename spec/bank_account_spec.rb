@@ -7,7 +7,6 @@ describe BankAccount do
   #     expect(subject.statement).to eq("date || credit || debit || balance\n")
   #   end
 
-
   # it 'shows a deposit can be received' do
   #   subject.deposit(10)
   #   expect(subject.statement).to eq("date || credit || debit || balance\n31/08/2021 || 10.00 || || 10.00\n")
