@@ -82,7 +82,20 @@ First clone the repo onto your local machine:
 git clone https://github.com/pav0107/bank-tech-test.git
 ```
 
-Next, open the command line and run the following:
+Next, install the required gems:
+
+```
+bundle install
+```
+
+If you get a message about your bundler, please update:
+
+```
+gem install bundler
+bundle install
+```
+
+Then, run the following:
 
 ```
 ruby bank_program.rb
