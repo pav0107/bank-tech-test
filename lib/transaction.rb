@@ -13,12 +13,12 @@ class Transaction
   end
 
   def details
-    decimal_credit = @credit != 0 ? to_2_decimal_places(@credit) : ''
+    decimal_credit = @credit != 0 ? " #{to_2_decimal_places(@credit)} " : ' '
 
-    @debit != 0 ? decimal_debit = to_2_decimal_places(@debit) : decimal_debit == ''
+    decimal_debit = @debit != 0 ? " #{to_2_decimal_places(@debit)} " : ' '
 
     decimal_balance = to_2_decimal_places(@balance)
 
-    "#{@date} || #{decimal_credit} || #{decimal_debit} || #{decimal_balance}"
+    "#{@date} ||#{decimal_credit}||#{decimal_debit}|| #{decimal_balance}"
   end
 end

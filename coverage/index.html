@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-09-01T11:29:37+01:00">2021-09-01T11:29:37+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-09-01T15:47:35+01:00">2021-09-01T15:47:35+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -1170,7 +1170,7 @@
 
             
 
-            <code class="ruby">    decimal_credit = @credit != 0 ? to_2_decimal_places(@credit) : &#39;&#39;</code>
+            <code class="ruby">    decimal_credit = @credit != 0 ? &quot; #{to_2_decimal_places(@credit)} &quot; : &#39; &#39;</code>
           </li>
         </div>
       
@@ -1192,7 +1192,7 @@
 
             
 
-            <code class="ruby">    @debit != 0 ? decimal_debit = to_2_decimal_places(@debit) : decimal_debit == &#39;&#39;</code>
+            <code class="ruby">    decimal_debit = @debit != 0 ? &quot; #{to_2_decimal_places(@debit)} &quot; : &#39; &#39;</code>
           </li>
         </div>
       
@@ -1236,7 +1236,7 @@
 
             
 
-            <code class="ruby">    &quot;#{@date} || #{decimal_credit} || #{decimal_debit} || #{decimal_balance}&quot;</code>
+            <code class="ruby">    &quot;#{@date} ||#{decimal_credit}||#{decimal_debit}|| #{decimal_balance}&quot;</code>
           </li>
         </div>
       
@@ -1540,7 +1540,7 @@
 
             
 
-            <code class="ruby">    expect(subject.print_statement).to eq(&quot;date || credit || debit || balance\n#{current_date} || 10.00 ||  || 10.00&quot;)</code>
+            <code class="ruby">    expect(subject.print_statement).to eq(&quot;date || credit || debit || balance\n#{current_date} || 10.00 || || 10.00&quot;)</code>
           </li>
         </div>
       
@@ -1606,7 +1606,7 @@
 
             
 
-            <code class="ruby">    new_statement = &quot;date || credit || debit || balance\n#{current_date} ||  || 4.00 || 6.00\n#{current_date} || 10.00 ||  || 10.00&quot;</code>
+            <code class="ruby">    new_statement = &quot;date || credit || debit || balance\n#{current_date} || || 4.00 || 6.00\n#{current_date} || 10.00 || || 10.00&quot;</code>
           </li>
         </div>
       
@@ -1921,7 +1921,7 @@
 
             
 
-            <code class="ruby">    expect(transaction1.details).to eq(&quot;31/08/2021 || 10.00 ||  || 10.00&quot;)</code>
+            <code class="ruby">    expect(transaction1.details).to eq(&quot;31/08/2021 || 10.00 || || 10.00&quot;)</code>
           </li>
         </div>
       
@@ -1976,7 +1976,7 @@
 
             
 
-            <code class="ruby">    expect(transaction2.details).to eq(&quot;01/09/2021 ||  || 10.00 || -10.00&quot;)</code>
+            <code class="ruby">    expect(transaction2.details).to eq(&quot;01/09/2021 || || 10.00 || -10.00&quot;)</code>
           </li>
         </div>
       
