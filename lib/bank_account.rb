@@ -17,13 +17,13 @@ class BankAccount
   def deposit(amount)
     @balance += amount
     transaction = Transaction.new(current_date, amount, 0, @balance)
-    @statement.history = transaction.details + @statement.history
+    @statement.history = @statement.history.unshift(transaction.details)
   end
 
   def withdraw(amount)
     @balance -= amount
     transaction = Transaction.new(current_date, 0, amount, @balance)
-    @statement.history = transaction.details + @statement.history
+    @statement.history = @statement.history.unshift(transaction.details)
   end
 
   def print_statement

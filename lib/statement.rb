@@ -5,10 +5,10 @@ class Statement
 
   def initialize
     @row_title = "date || credit || debit || balance\n"
-    @history = ''
+    @history = []
   end
 
   def print
-    @row_title + @history
+    @row_title + @history.join("")
   end
 end
