@@ -1,6 +1,6 @@
 # Bank tech test
 
-This test was given on week 10 of Makers. Essentially, it's a command-line app that enables a user to deposit and withdraw money from a bank account as well as being able to print a bank statement.
+This test was given on week 10 of Makers. Essentially, it's a command-line app that enables a user to deposit and withdraw money from a bank account, and print a bank statement, detailing their transactions.
 
 ## Specification
 
@@ -51,8 +51,8 @@ I'd like to withdraw money and see my balance decrease by that amount.
 
 ```
 As a customer
-so that I can know what money has being going into and out from my account
-I'd like to be able to print a bank statement that shows the date and amount each time I deposit or withdraw money, as well as the balance.
+so that I can know what money has been going in and out of my account
+I'd like to print a bank statement that shows the date and amount each time I deposit or withdraw money, as well as the balance.
 ```
 
 ## Domain model
