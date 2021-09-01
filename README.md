@@ -1,6 +1,6 @@
 # Bank tech test
 
-This test was given on week 10 of Makers. Essentially, it's a command-line app that enables a user to deposit and withdraw money from a bank account as well as being able to print a bank statement.
+This test was given on week 10 of Makers. Essentially, it's a command-line app that enables a user to deposit and withdraw money from a bank account, and print a bank statement, detailing their transactions.
 
 ## Specification
 
@@ -32,6 +32,8 @@ date || credit || debit || balance
 - I used Rubocop for my linter and SimpleCov to ensure good test coverage.
 - I started with a BankAccount class, getting deposit and withdraw functionality working. I then moved on to the statement, getting the most current one at the top.
 - I then moved on to the user interaction via the command line.
+- I initially just used one class, which is on the main branch, but later used multiple classes, which is on the 'splitting_classes' branch.
+- I also, initially, had the statement history as a string, but changed to an array. This will make it easier to extend functionality to include selected specific transactions.
 
 ## User stories
 
@@ -49,11 +51,13 @@ I'd like to withdraw money and see my balance decrease by that amount.
 
 ```
 As a customer
-so that I can know what money has being going into and out from my account
-I'd like to be able to print a bank statement that shows the date and amount each time I deposit or withdraw money, as well as the balance.
+so that I can know what money has been going in and out of my account
+I'd like to print a bank statement that shows the date and amount each time I deposit or withdraw money, as well as the balance.
 ```
 
 ## Domain model
+
+Initially I used just one class and the following domain model.
 
 |   BankAccount    |
 | :--------------: |
@@ -65,6 +69,10 @@ I'd like to be able to print a bank statement that shows the date and amount eac
 |     credit()     |
 |     debit()      |
 |   statement()    |
+
+I then split the class up, using the following domain model:
+
+![domain model](./domain_model.png)
 
 ## Running the program
 
@@ -94,6 +102,10 @@ Print Statement
 - If depositing or withdrawing, you'll be asked how much and then receive a confirmation, followed by the three initial options. If zero or any non-integer is entered an error message will appear.
 
 - If printing a statement, the statement will appear, followed by the initial three options.
+
+## Example of the program
+
+![example](./irb.png)
 
 ## Running tests
 
